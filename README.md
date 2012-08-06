@@ -24,11 +24,11 @@ x86 AT&T syntax
 ```
 $ objdump -d mylib.so | python jnianalyzer.py -a x86
 ```
-* x86 intel syntax
+x86 intel syntax
 ```
 $ objdump -M intel -d mylib.so | python jnianalyzer.py -a x86
 ```
-* ARM
+ARM
 ```
 $ tools/arm-linux-androideabi-objdump -d mylib.so | python jnianalyzer.py -a arm
 ```
@@ -38,7 +38,7 @@ Example
 -------
 You can find some compiled libraries, coming from different projects, and their source code in the `example` folder.
 
-* hello-jni : sample from android-ndk-r8b
+hello-jni : sample from android-ndk-r8b
 ```
 $ objdump -M intel -d examples/hello-jni/libs/x86/libhello-jni.so | python jnianalyzer.py -a x86
 ...
