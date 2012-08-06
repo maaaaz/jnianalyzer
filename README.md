@@ -5,7 +5,7 @@ Description
 -----------
 A simple tool to help finding JNI calls in a x86/ARM disassembly listing.  
   
-Originally presented here http://www.thebugmagazine.org/magazine/bug04/0x02-engenharia-reversa-em-apps-java.txt, this script has been modified in order to support both x86 syntaxes and ARM.  
+Originally presented in this article http://www.thebugmagazine.org/magazine/bug04/0x02-engenharia-reversa-em-apps-java.txt, this script has been modified in order to support both x86 syntaxes as well as ARM.  
   
 Thus, it can be used for debugging/reverse engineering android native libraries.  
 
@@ -81,6 +81,15 @@ $ tools/arm-linux-androideabi-objdump -d examples/hello-jni/libs/armeabi/libhell
      c3e:       1c19            adds    r1, r3, #0
      c40:       4790            blx     r2
 ...
+```
+
+#### secretcode : example from the article
+```
+$ objdump -d examples/secretcode/secretcode.so | python jnianalyzer.py -a x86 | grep jnicall
+ 4be:	ff 90 a4 02 00 00    	call   *0x2a4(%eax)		;jnicall: GetStringUTFChars
+ 4d9:	ff 90 a0 02 00 00    	call   *0x2a0(%eax)		;jnicall: GetStringUTFLength
+ 550:	ff 90 9c 02 00 00    	call   *0x29c(%eax)		;jnicall: NewStringUTF
+ 571:	ff 90 a8 02 00 00    	call   *0x2a8(%eax)		;jnicall: ReleaseStringUTFChars
 ```
 
 Copyright and license
