@@ -6,6 +6,7 @@ Description
 A simple tool to help finding JNI calls in a x86/ARM disassembly listing.  
   
 Originally presented here http://www.thebugmagazine.org/magazine/bug04/0x02-engenharia-reversa-em-apps-java.txt, this script has been modified in order to support both x86 syntaxes and ARM.  
+  
 Thus, it can be used for debugging/reverse engineering android native libraries.  
 
 Features
@@ -19,7 +20,7 @@ Pass the ARM and x86 (AT&T or Intel syntax) disassembly listing via stdin.
 This was particulary designed for the objdump output.  
 The processed text can be collected at stdout.  
 
-* x86 AT&T syntax
+x86 AT&T syntax
 ```
 $ objdump -d mylib.so | python jnianalyzer.py -a x86
 ```
