@@ -20,7 +20,7 @@ Pass the ARM and x86 (AT&T or Intel syntax) disassembly listing via stdin.
 This was particulary designed for the objdump output.  
 The processed text can be collected at stdout.  
 
-### x86 AT&T syntax ###
+## x86 AT&T syntax ##
 ```
 $ objdump -d mylib.so | python jnianalyzer.py -a x86
 ```
