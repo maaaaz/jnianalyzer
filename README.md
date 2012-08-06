@@ -71,11 +71,11 @@ $ tools/arm-linux-androideabi-objdump -d examples/hello-jni/libs/armeabi/libhell
      c2a:       9100            str     r1, [sp, #0]
      c2c:       9b01            ldr     r3, [sp, #4]
      c2e:       681a            ldr     r2, [r3, #0]
-     c30:       23a7            movs    r3, #167      ; 0xa7
+     c30:       23a7            movs    r3, #167      ;0xa7
      c32:       009b            lsls    r3, r3, #2              ;jnicall: NewStringUTF
      c34:       58d2            ldr     r2, [r2, r3]
      c36:       9901            ldr     r1, [sp, #4]
-     c38:       4b04            ldr     r3, [pc, #16] ; (c4c <Java_com_example_hellojni_HelloJni_stringFromJNI+0x28>)
+     c38:       4b04            ldr     r3, [pc, #16] ;(c4c <Java_com_example_hellojni_HelloJni_stringFromJNI+0x28>)
      c3a:       447b            add     r3, pc
      c3c:       1c08            adds    r0, r1, #0
      c3e:       1c19            adds    r1, r3, #0
