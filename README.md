@@ -16,7 +16,7 @@ Features
 
 Usage
 -----
-Pass the ARM and x86 (AT&T or Intel syntax) disassembly listing via stdin.  
+Pass the ARM or x86 (AT&T or Intel syntax) disassembly listing via stdin.  
 This was particulary designed for the objdump output.  
 The processed text can be collected at stdout.  
 
@@ -24,7 +24,7 @@ The processed text can be collected at stdout.
 ```
 $ objdump -d mylib.so | python jnianalyzer.py -a x86
 ```
-#### x86 intel syntax
+#### x86 Intel syntax
 ```
 $ objdump -M intel -d mylib.so | python jnianalyzer.py -a x86
 ```
@@ -32,11 +32,10 @@ $ objdump -M intel -d mylib.so | python jnianalyzer.py -a x86
 ```
 $ tools/arm-linux-androideabi-objdump -d mylib.so | python jnianalyzer.py -a arm
 ```
-Pass the ARM and x86 (AT&T or Intel syntax) disassembly listing via stdin.
 
 Examples
 -------
-You can find some compiled libraries, coming from different projects, and their source code in the `example` folder.
+You can find some compiled libraries coming from different projects, and their source code in the `examples` folder.
 
 #### hello-jni : sample from android-ndk-r8b
 ```
