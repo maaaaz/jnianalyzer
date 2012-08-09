@@ -37,7 +37,7 @@ Examples
 -------
 You can find some compiled libraries coming from different projects, and their source code in the `examples` folder.
 
-#### hello-jni : sample from android-ndk-r8b
+#### hello-jni: sample from android-ndk-r8b
 ```
 $ objdump -M intel -d examples/hello-jni/libs/x86/libhello-jni.so | python jnianalyzer.py -a x86
 ...
@@ -82,7 +82,7 @@ $ tools/arm-linux-androideabi-objdump -d examples/hello-jni/libs/armeabi/libhell
 ...
 ```
 
-#### secretcode : example 'ex03' from [that article](http://www.thebugmagazine.org/magazine/bug04/0x02-engenharia-reversa-em-apps-java.txt)
+#### secretcode: example 'ex03' from [that article](http://www.thebugmagazine.org/magazine/bug04/0x02-engenharia-reversa-em-apps-java.txt)
 ```
 $ objdump -d examples/secretcode/secretcode.so | python jnianalyzer.py -a x86 | grep jnicall
  4be:	ff 90 a4 02 00 00    	call   *0x2a4(%eax)		;jnicall: GetStringUTFChars
