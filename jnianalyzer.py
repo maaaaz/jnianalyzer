@@ -268,10 +268,10 @@ def arm_analysis() :
             # Check for state.
             if reg1 == reg2 and reg1 in regs:
                 # We have state. Add a JNI call reference.
-                line += '\t\t;jnicall: ' + regs[reg]
+                line += '\t\t;jnicall: ' + regs[reg1]
                 
                 # Remove any state held for this register.
-                del regs[reg]
+                del regs[reg1]
         
         print(line)
 
